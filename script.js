@@ -2,7 +2,7 @@ const containerVideos = document.querySelector(".videos__container");
 
 async function buscarEMostrarVideos() {
   try {
-    const busca = await fetch("./backend/videos.json");
+    const busca = await fetch("http://localhost:3000/videos");
     const videos = await busca.json();
     videos.forEach((video) => {
       containerVideos.innerHTML += `
